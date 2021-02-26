@@ -1,0 +1,1 @@
+https://www.vecteezy.com/vector-art/595174-sound-wave-illustration-vector

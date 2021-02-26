@@ -1,0 +1,39 @@
+/* eslint-disable import/extensions */
+import porfolioData from "./data/portfolioData.js";
+
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelectorAll(".nav_list_item_link");
+const porfolioLinks = document.querySelectorAll(".projects_portfolio_item");
+
+const modalBackground = document.querySelector(".modal-background");
+const modal = document.querySelector(".modal");
+const modalTitle = document.getElementById("modal-title");
+const modalVideo = document.getElementById("modal-video");
+const modalDescription = document.getElementById("modal-description");
+const modalLiveBuild = document.getElementById("modal-live-build");
+const modalGitHub = document.getElementById("modal-github");
+
+navToggle.addEventListener("click", () =>
+  document.body.classList.toggle("nav-open")
+);
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () =>
+    document.body.classList.remove("nav-open")
+  );
+});
+
+modalBackground.addEventListener("click", () => {
+  modalBackground.classList.remove("modal-active");
+});
+
+for (let i = 0; i < porfolioLinks.length; i += 1) {
+  porfolioLinks[i].addEventListener("click", () => {
+    modalBackground.classList.toggle("modal-active");
+    modalTitle.innerHTML = porfolioData[i].name;
+    modalVideo.setAttribute("src", porfolioData[i].video);
+    modalDescription.innerHTML = porfolioData[i].description;
+    modalLiveBuild.setAttribute("href", porfolioData[i].liveLink);
+    modalGitHub.setAttribute("href", porfolioData[i].gitHubLink);
+  });
+}

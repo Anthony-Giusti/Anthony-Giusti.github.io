@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="./styles/reset.css">
+    <link rel='stylesheet' href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro:wght@300;600;900&display=swap" rel="stylesheet">
+    <title>Anthony Giusti</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo_rect-1"></div>
+            <div class="logo_rect-2"></div>
+            <div class="logo_rect-3"></div>
+            <div class="logo_rect-4"></div>
+            <div class="logo_rect-5"></div>
+            <div class="logo_rect-6"></div>
+            <div class="logo_rect-5"></div>
+            <div class="logo_rect-4"></div>
+            <div class="logo_rect-3"></div>
+            <div class="logo_rect-2"></div>
+            <div class="logo_rect-1"></div>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav_list">
+                <li class="nav_list_item">
+                    <a href="#home" class="nav_list_item_link">Home</a>
+                </li>
+                <li class="nav_list_item">
+                    <a href="#about" class="nav_list_item_link">About Me</a>
+                </li>
+                <li class="nav_list_item">
+                    <a href="#learning" class="nav_list_item_link">My Learning</a>
+                </li>
+                <li class="nav_list_item">
+                    <a href="#projects" class="nav_list_item_link">My Projects</a>
+                </li>
+            </ul>
+        </nav>
+    </Header>
+
+    <!-- Intro -->
+    <section class="intro" id="home">
+        <h1 class="intro_title">
+            Hello! I am <strong>Anthony Giusti</strong>
+        </h1>
+        <p class="intro_subtitle">
+            Audio Enigneer and Web Developer
+        </p>
+        <img src="https://res.cloudinary.com/diby2nljo/image/upload/c_scale,q_auto:eco,w_500/v1613770238/Portfolio/IMG_20210217_141540239_HDR_hcpyzr.jpg" class="intro_img">
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About me:</h2>
+        <p>During my time earning my degree at Columbia College Chicago I primarily worked on student 
+            films during audio design and production. I already had been digitally creating music for 
+            years so I enjoy the creativity of audio production. I believe sound aspect of films is very 
+            important but often overlooked piece of the art form a good sound design can definitely make or break a film.
+        </p>
+        <p>Outside of school, I did my first freelance job in the events industry in 2011. A few years 
+            later after finishing my Audio degree I transitioned to full time employment in the events 
+            industry. I enjoy event production since it allows you take to elements of audio, video, 
+            camera, projection, computers and other technologies and combine them in interesting and creative ways.
+        </p>
+    </section>
+
+    <!-- What I Know -->
+    <section class="learning" id="learning">
+        <h2>How I learned to code:</h2>
+        <div class="learning_container">
+            <div class="learning_section">
+                <h3>Codecademy Pro</h3>
+                <p>
+                    Codecademy Pro is the primary way I learned how to code.
+                </p>
+            </div>
+            <div class="learning_section">
+                <h3>Scrimba</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+            </div>
+            <div class="learning_section">
+                <h3>Udemy</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+        <p>A few things I have made:</p>
+
+        <div class="projects_portfolio">
+            <button class="projects_portfolio_item" id="apogee">
+                <img src="https://res.cloudinary.com/diby2nljo/image/upload/c_fill,h_300,q_auto:eco,w_300/v1614096618/Portfolio/ApogeeCafe_w8tltm.png" alt="apogee cafe portfolio item">
+            </button>
+            <button class="projects_portfolio_item" id="pizza">
+                <img src="https://res.cloudinary.com/diby2nljo/image/upload/c_fill,h_300,w_300/v1614096865/Portfolio/PizzaMaker_ejrr2n.png" alt="pizza maker portfolio item">
+            </button>
+            <button class="projects_portfolio_item" id="spotify">
+                <img src="https://res.cloudinary.com/diby2nljo/image/upload/c_fill,h_300,q_auto:eco,w_300/v1614097195/Portfolio/SpotifyCharts_re3l8b.png" alt="spotify charts portfolio item">
+            </button>
+        </div>
+    </section>
+
+    <!-- Projects Modal -->
+    <div class="modal-background">
+        <div class="modal">
+            <div class="modal_header">
+                <h2 class="modal_header_title" id="modal-title"></h2>
+            </div>
+            <div class="modal_body">
+                <div class="modal_body_video-container">
+                    <video id="modal-video" autoplay loop>
+                        <source id="modal-video-source" src="" alt="no video loaded">
+                    </video>
+                </div>
+                <div class="modal_body_information">
+                    <p class="modal_description" id="modal-description"></p>
+                </div>
+            </div>
+            <div class="modal_footer">
+                    <a class="modal_live-build" href="" target="blank" id="modal-live-build">Live build</a>
+                    <a class="modal_github" href="" target="blank" id="modal-github">Github</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer_links">
+            <div class="footer_links_container">
+                <a href="#" class="footer_links_link">
+                    Email Me
+                </a>
+            </div>
+            <div class="footer_links_container">
+                <a href="https://docs.google.com/document/d/1APFIelO3fRi5k3K8DG4u-rZAqNvIp6JScD4Xztq7C4M/edit?usp=sharing" 
+                target="blank" 
+                class="footer_links_link">
+                View Resume
+            </a>
+        </div>
+        </div>
+       <ul class="footer_icons">
+        <li class="footer_icons_item">
+            <a href="https://github.com/Anthony-Giusti" target="blank" class="footer_icons_link">
+                <i class="fab fa-github"></i>
+            </a>
+        </li>
+        <li class="footer_icons_item"><a target="blank" href="https://www.linkedin.com/in/anthony-giusti/" class="footer_icons_link">
+            <i class="fab fa-linkedin-in"></i></a></li>
+       </ul>    
+    </footer>
+
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>
