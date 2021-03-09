@@ -131,10 +131,17 @@ body {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
   line-height: 1.5;
   font-size: 1.2em;
   margin: 0;
+}
+
+a {
+  color: #0df1fd;
+}
+
+a:hover {
+  color: white;
 }
 
 h1 {
@@ -151,14 +158,6 @@ h2 {
 h3 {
   font-family: "Source Code Pro", monospace;
   font-size: 1.5rem;
-}
-
-a {
-  color: #0df1fd;
-}
-
-a:hover {
-  color: white;
 }
 
 .header {
@@ -342,7 +341,7 @@ a:hover {
     -ms-grid-column: 2;
     grid-area: title;
     text-align: left;
-    font-size: 2.5em;
+    font-size: 2.4em;
   }
   .intro_subtitle {
     font-size: 1.2em;
@@ -358,9 +357,9 @@ a:hover {
     -ms-grid-row: 2;
     grid-row: 2;
     text-align: right;
-    position: relative;
-    left: 10%;
-    width: calc(90%);
+    left: 30%;
+    width: 14em;
+    padding-left: 5.5em;
     padding-right: 2rem;
   }
 }
@@ -373,10 +372,14 @@ a:hover {
 
 @media (min-width: 1000px) {
   .intro_title {
-    font-size: 5em;
+    font-size: 4.8em;
   }
   .intro_subtitle {
     bottom: 80%;
+    left: 10%;
+    font-size: 1.5em;
+    width: calc(85%);
+    padding-left: 0.5em;
   }
   .intro_img {
     max-width: 20em;
@@ -385,7 +388,7 @@ a:hover {
 
 .about {
   background: url("https://res.cloudinary.com/diby2nljo/image/upload/c_scale,q_auto:eco,w_800/v1614022930/Portfolio/pexels-hendrik-b-744318_neial4.jpg") no-repeat center;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.87);
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: multiply;
@@ -403,6 +406,8 @@ a:hover {
 .learning {
   text-align: center;
   padding: 2em 1em;
+  background: #111;
+  color: white;
 }
 
 .learning_container {
@@ -451,6 +456,7 @@ a:hover {
 .projects_portfolio_item {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .projects_portfolio_item img {
@@ -465,8 +471,8 @@ a:hover {
   transition: all ease-in-out 0.2s;
 }
 
-.projects_portfolio_item :focus {
-  outline: 3px solid white;
+.projects_portfolio_item:focus {
+  outline: 10px solid white;
   outline-offset: 3px;
 }
 
@@ -594,26 +600,18 @@ a:hover {
 
 .footer {
   background: #111;
-  color: #0df1fd;
   padding: 2em;
   font-size: 1.5rem;
 }
 
 .footer_links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   margin: 0 auto;
 }
 
 .footer_links_container {
+  position: relative;
   width: 50%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -626,9 +624,42 @@ a:hover {
   text-align: center;
 }
 
+.footer_links_container button {
+  background: none;
+  border: none;
+  color: #0df1fd;
+  cursor: pointer;
+}
+
+.footer_links_container button:hover {
+  color: white;
+}
+
 .footer_links_link {
   font-weight: 900;
   margin: 0.5em;
+  position: relative;
+  z-index: 2;
+}
+
+.footer_links_link_copied {
+  width: 25em;
+  opacity: 0;
+  font-size: 0.8em;
+  color: white;
+  position: absolute;
+  z-index: 0;
+  top: 1em;
+  padding-left: 0em;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+}
+
+.footer .copied-visible {
+  opacity: 100;
+  top: 2.2em;
 }
 
 .footer a {
@@ -658,17 +689,6 @@ a:hover {
 }
 
 .footer_icons_link :hover {
-  color: #0df1fd;
-}
-
-@media (min-width: 700px) {
-  .footer_links :first-child {
-    text-align: right;
-    padding-right: 1em;
-  }
-  .footer_links :last-child {
-    text-align: left;
-    padding-left: 1em;
-  }
+  color: white;
 }
 /*# sourceMappingURL=index.css.map */

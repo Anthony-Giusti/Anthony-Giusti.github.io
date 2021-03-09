@@ -13,6 +13,9 @@ const modalDescription = document.getElementById("modal-description");
 const modalLiveBuild = document.getElementById("modal-live-build");
 const modalGitHub = document.getElementById("modal-github");
 
+const copyText = document.getElementById("copy");
+const copiedText = document.getElementById("copied");
+
 navToggle.addEventListener("click", () =>
   document.body.classList.toggle("nav-open")
 );
@@ -37,3 +40,15 @@ for (let i = 0; i < porfolioLinks.length; i += 1) {
     modalGitHub.setAttribute("href", porfolioData[i].gitHubLink);
   });
 }
+
+const removeCopied = () => {
+  copiedText.classList.remove("copied-visible");
+};
+
+const copyToClipBoard = () => {
+  navigator.clipboard.writeText("anthonyggiusti@gmail.com");
+  copiedText.classList.add("copied-visible");
+  setTimeout(removeCopied, 2500);
+};
+
+copyText.addEventListener("click", copyToClipBoard);
