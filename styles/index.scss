@@ -2,6 +2,7 @@
 @import "./scss/utilities/functions";
 
 @import "./scss/logo";
+@import "./scss/loader";
 
 html {
     scroll-behavior: smooth;
@@ -313,7 +314,7 @@ h3 {
 
     &_portfolio {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
         justify-items: center;
         margin-top: 1em;
 
@@ -324,6 +325,8 @@ h3 {
 
             & img {
                 box-shadow: $box-shadow;
+                max-width: 100%;
+
             }
 
             &:hover {
@@ -379,6 +382,7 @@ h3 {
         flex-direction: column;
 
         &_video-container {
+            position: relative;
             min-height: 8em;
             height: 10em;
             max-width: 100%;
@@ -386,6 +390,8 @@ h3 {
             margin: 0 auto;
     
             & video {
+                position: relative;
+                z-index: 2;
                 max-height: 100%;
                 max-width: 100%;
             }
@@ -423,7 +429,7 @@ h3 {
                height: 20em;
                
                & video {
-                box-shadow: $box-shadow;
+                // box-shadow: $box-shadow;
                }
             }
             &_information {
@@ -456,15 +462,16 @@ h3 {
 
 .footer {
     background: #111;
-    padding: 2em;
+    padding: 2em 0em;
     font-size: $font-size-h3;
 
     &_links {
         margin: 0 auto;
+        font-size: 0.7em;
 
         &_container{
             position: relative;
-            width: 50%;
+            width: 100%;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -490,7 +497,7 @@ h3 {
             z-index: 2;
 
             &_copied{
-                width: 25em;
+                // width: 100%;
                 opacity: 0;
                 font-size: 0.8em;
                 color: $clr-white;
@@ -536,18 +543,10 @@ h3 {
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 400px){
     .footer {
-        // &_links {
-        //     & :first-child {
-        //         text-align: right;
-        //         padding-right: 1em;
-        //     }
-    
-        //     & :last-child {
-        //         text-align: left;
-        //         padding-left: 1em;
-        //     }
-        // }
+        &_links {
+            font-size: 1em;
+        }
     }
 }
