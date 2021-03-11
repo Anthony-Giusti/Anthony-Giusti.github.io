@@ -6,7 +6,6 @@ const navLinks = document.querySelectorAll(".nav_list_item_link");
 const porfolioLinks = document.querySelectorAll(".projects_portfolio_item");
 
 const modalBackground = document.querySelector(".modal-background");
-const modal = document.querySelector(".modal");
 const modalTitle = document.getElementById("modal-title");
 const modalVideo = document.getElementById("modal-video");
 const modalDescription = document.getElementById("modal-description");
