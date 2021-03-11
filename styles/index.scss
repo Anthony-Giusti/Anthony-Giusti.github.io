@@ -388,6 +388,9 @@ h3 {
             max-width: 100%;
             text-align: center;
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
     
             & video {
                 position: relative;
@@ -427,10 +430,6 @@ h3 {
         &_body {
             &_video-container {
                height: 20em;
-               
-               & video {
-                // box-shadow: $box-shadow;
-               }
             }
             &_information {
                font-size: 1em;
