@@ -407,6 +407,8 @@ h3 {
 
             & p {
                 margin: 0.5em;
+                overflow-y: scroll;
+                max-height: 15em;
             }
         }
     }
@@ -433,6 +435,9 @@ h3 {
             }
             &_information {
                font-size: 1em;
+              & p {
+                max-height: 9em;
+              }
             }
         }
     }
@@ -445,7 +450,7 @@ h3 {
             &_information {
                 & p {
                     margin: 0 auto;
-                    width: 70%;
+                    width: 90%;
                 }
             }
         }
