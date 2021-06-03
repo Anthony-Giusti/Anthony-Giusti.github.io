@@ -722,6 +722,8 @@ h3 {
 
 .modal_body_information p {
   margin: 0.5em;
+  overflow-y: scroll;
+  max-height: 15em;
 }
 
 .modal_footer {
@@ -749,6 +751,9 @@ h3 {
   .modal_body_information {
     font-size: 1em;
   }
+  .modal_body_information p {
+    max-height: 9em;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -757,7 +762,7 @@ h3 {
   }
   .modal_body_information p {
     margin: 0 auto;
-    width: 70%;
+    width: 90%;
   }
 }
 
