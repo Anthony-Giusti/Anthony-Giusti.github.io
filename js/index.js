@@ -55,15 +55,14 @@ const copyToClipBoard = () => {
 copyText.addEventListener("click", copyToClipBoard);
 
 const appearOptions = {
-  threshold: 0.75,
+  threshold: 0.65,
   rootMargin: "0px 0px 75px 0px",
 };
 
-const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+const appearOnScroll = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("appear");
-      console.log(appearOnScroll);
     }
   });
 }, appearOptions);
