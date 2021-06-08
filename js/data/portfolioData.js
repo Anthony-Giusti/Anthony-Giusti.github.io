@@ -21,7 +21,7 @@ const porfolioData = [
   },
   {
     id: 2,
-    name: "Build-A-Pizza",
+    name: "Pizza Builder",
     video:
       "https://res.cloudinary.com/diby2nljo/video/upload/ac_none,c_crop,h_474,q_auto:low,w_800/v1614293810/Portfolio/Video/portfoliovideo-pizza_z6goxu.mp4",
     description:
