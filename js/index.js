@@ -1,9 +1,11 @@
+/* eslint-disable no-shadow */
 /* eslint-disable import/extensions */
 import porfolioData from "./data/portfolioData.js";
 
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav_list_item_link");
 const porfolioLinks = document.querySelectorAll(".projects_portfolio_item");
+const faders = document.querySelectorAll(".fade-in");
 
 const modalBackground = document.querySelector(".modal-background");
 const modalTitle = document.getElementById("modal-title");
@@ -51,3 +53,21 @@ const copyToClipBoard = () => {
 };
 
 copyText.addEventListener("click", copyToClipBoard);
+
+const appearOptions = {
+  threshold: 0.75,
+  rootMargin: "0px 0px 75px 0px",
+};
+
+const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("appear");
+      console.log(appearOnScroll);
+    }
+  });
+}, appearOptions);
+
+faders.forEach((fader) => {
+  appearOnScroll.observe(fader);
+});
