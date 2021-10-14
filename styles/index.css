@@ -613,6 +613,7 @@ h3 {
 }
 
 .projects_portfolio_item {
+  z-index: 1;
   border-radius: 2em;
   padding: 0;
   background: transparent;
