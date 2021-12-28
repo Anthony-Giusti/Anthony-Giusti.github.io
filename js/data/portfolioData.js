@@ -10,6 +10,16 @@ const porfolioData = [
     gitHubLink: "https://github.com/Anthony-Giusti/Recipes-Tracker",
   },
   {
+    id: 5,
+    name: "TypeScript User Database",
+    video:
+      "https://res.cloudinary.com/diby2nljo/video/upload/c_fill,h_474,q_auto:low,w_800/v1640718628/Portfolio/Video/2021-12-28_13-08-50_zdmj2c.mkv",
+    description:
+      "This project was primarily a way for me to learn how to use TypeScript. It will allow you to create, edit and delete users and the data will be stored in a MongoDB cluster. This was my first time using TypeScript and I learn mostly by doing so it was a great learning experience.",
+    liveLink: "https://user-database-typescript.netlify.app/",
+    gitHubLink: "https://github.com/Anthony-Giusti/user-database-typescript",
+  },
+  {
     id: 1,
     name: "Apogge Cafe",
     video:
